@@ -6,11 +6,10 @@ em metros quadrados da área a ser pintada. Considere que a cobertura da tinta
 18 litros, que custam R$ 80,00. Informe ao usuário a quantidades de latas de
 tinta a serem compradas e o preço total."""
 
-area = float(input("Qual o tamanho da área a ser pintada? "))
+area = int(input("Qual o tamanho da área a ser pintada? "))
 
-# 1 litro -> 3 metros
-# 18 litros -> 54 metros quadrados
-
-latas = area / 18
+litros = area / 3
+latas = round(litros / 18)
 preco = latas * 80
-print(latas, preco)
+print(f"Para pintar uma área de {area}m² você precisará de {latas} lata(s) de tinta")
+print(f"O preço total foi de R$ {preco:.2f}")
